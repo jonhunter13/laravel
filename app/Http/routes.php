@@ -14,3 +14,10 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::auth();
+
+Route::get('/', 'CredlyApiController@index');
+Route::get('/user/{id}', 'CredlyApiController@show');
+
+
