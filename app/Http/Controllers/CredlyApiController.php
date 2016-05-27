@@ -11,11 +11,6 @@ class CredlyApiController extends Controller
     private $API_KEY = "b9417cd9925025d34650d783548f1c74";
     private $SECRET = "bxpwpf2INVs6ISl2eCiJJ2msUou0wd3w5Sw/qIFcEgI8bMafNxWQ+YUGhKv3yivtjSEv2KcE7Afr1VmRLT3E9F3FhBh++ULsP2axwfMcq3j389+dCbO/NSrpSgcPs+apC4YyZrp51osOAPTsozQslKLidFM2Wothj1sG+hGfpEk=";
 
-    /**
-     * Show the application dashboard.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function index()
     {
         $client = new Client();
@@ -29,7 +24,6 @@ class CredlyApiController extends Controller
         ]);
         
         $data = json_decode($res->getBody()->getContents())->data;
-        
         return view('welcome', compact('data'));
     }
     

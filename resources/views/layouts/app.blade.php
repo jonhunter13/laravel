@@ -29,9 +29,23 @@
             width:150px;
         }
         
-        .badge-img{
+        .avatar-thumb {
+            border-radius:50%;
+            width:90px;
+        }
+        
+        .badge-img {
             width: 120px;
             height: 120px;
+        }
+        
+        .circle{
+        	color:red;
+        	font-size:1.5em;
+        	font-weight: bold;
+        }
+        .checkmark{
+        	color:green;
         }
     </style>
 </head>

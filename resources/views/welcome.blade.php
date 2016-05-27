@@ -10,7 +10,10 @@
                 <div class="panel-body">
                     <ul class="list-group">
                         @foreach ($data as $key=>$user)
-                            <li class="list-group-item"><img class="avatar" src="{{ $user->avatar }}"></img> <b><a href="{{ action('CredlyApiController@show', [$user->id]) }}">{{ $user->display_name }}</a></b></li>
+                            <li class="list-group-item">
+                                <p><a href="{{ action('CredlyApiController@show', [$user->id]) }}"><img class="avatar" src="{{ $user->avatar }}" alt="{{ $user->display_name }}"/> 
+                                <strong>{{ $user->display_name }}</strong></a></p>
+                            </li>
                         @endforeach
                     </ul>
                 </div>
